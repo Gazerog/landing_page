@@ -1,5 +1,9 @@
-#from django.http import HttpResponse
 from django.shortcuts import render
+from .models import *
 
-def rendering_main_page(request):
-    return render(request, "index.html")
+def rendering_pages(request, name):
+    if name == 'home':
+        menu_skill_blocks = Skill_block.objects.all()
+        return render(request, "home.html", context={'block_menu': menu_skill_blocks})
+    return render(request, f"{name}.html")
+

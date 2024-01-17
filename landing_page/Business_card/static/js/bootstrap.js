@@ -4403,7 +4403,6 @@
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v4.3.1): index.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -4442,4 +4441,7 @@
   });
 
 }));
+
+
+
 //# sourceMappingURL=bootstrap.js.map
