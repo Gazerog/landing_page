@@ -9,7 +9,7 @@
                   <a class="nav-link" href="{% url 'about' %}"> Обо мне</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'service' %}"> Навыки </a>
+                  <a class="nav-link" href="{% url 'services' %}"> Навыки </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'github' %}"> проекты GitHub </a>
@@ -84,120 +84,31 @@
       </div>
 
       <div class="service_container">
-
+        
         {% for i in block_menu %}
-        <div class="box">                              
-            <div class="img-box">
-                <img src="{% static 'images/python_logo.png' %}" class="img1" alt="">
-            </div>
+        <div class="box">
+          <div class="btn-block">
+            <a href="{% url 'service' skill_slug=i.slug %}">
+              <div class="content_box">
+                <div class="img-box">
+                    <img src="{% static 'images/python_logo.png' %}" class="img1" alt="">
+                </div>
 
-            <div class="detail-box">
-              <h5>
-                {{ i.name_skill }}
-              </h5>
-              <p>
-                {{ i.details }}
-              </p>
-            </div>
-            <div class="btn-box">
-              <a href="{% url 'service' %}">
-                sadf
-              </a>
-            </div>
+                <div class="detail-box">
+                  <h5>
+                    {{ i.name_skill }}
+                  </h5>
+                  <p>
+                    {{ i.details }}
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>  
         </div>
 
   
         {% endfor %}
-<!--
-        <div class="box">                              
-            <div class="img-box">
-                <img src="{% static 'images/python_logo.png' %}" class="img1" alt="">
-            </div>
-
-            <div class="detail-box">
-              <h5>
-                Equipment installation
-              </h5>
-              <p>
-                There are many variations of passages of Lorem Ipsum available,
-              </p>
-            </div>
-            <div class="btn-box">
-              <a href="{% url 'service' %}">
-                sadf
-              </a>
-            </div>
-        </div>
-
-
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/Django-logo.png' %}" class="img1" alt="">
-          </div>
-
-          <div class="detail-box">
-            <h5>
-              Windmill Energy
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-
-          <div class="btn-box">
-            <a href="">
-              Пример работы
-            </a>
-          </div>
- 
-        </div>
-
-
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s3.png' %}" class="img1" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Equipment Maintenance
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-        </div> 
-
-
-        <div class="box ">
-          <div class="img-box">
-            <img src="{% static 'images/s4.png' %}" class="img1" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Offshore Engineering
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-        </div>
-
-
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s5.png' %}" class="img1" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Electrical Wiring
-            </h5>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,
-            </p>
-          </div>
-        </div> 
--->
-
       </div>
   </section>
 
